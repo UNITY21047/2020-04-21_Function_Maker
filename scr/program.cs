@@ -3,6 +3,7 @@ using System.Windows.Forms;
 using System.ComponentModel;
 using System.Drawing;
 using System.IO;
+using System.Collections.Generic;
 
 namespace Function_Maker
 {
@@ -10,7 +11,7 @@ namespace Function_Maker
     {
         //Form Settings
         private Size form_size = new Size(400,300);
-        private Icon form_icon = new Icon("icon.ico");
+        private Icon form_icon = new Icon("./cue/icon.ico");
         private string form_title = "Function Maker";
         private Boolean form_maximizebox = false;
 
@@ -118,14 +119,19 @@ namespace Function_Maker
         public int function_result()
         {
             int hin = 0;
-
+            string jin = function_box.Text;
+            functions function = new functions();
+            
             try
             {
-                hin = Int32.Parse(function_box.Text);
+                for(int i = 0; i < jin.Length; i++)
+                {
+
+                }
             }
             catch(Exception e)
             {
-                output_label.Text = "OUTPUT: NOT A FUNCTION";
+                MessageBox.Show(e.Message);
             }
 
             return hin;
