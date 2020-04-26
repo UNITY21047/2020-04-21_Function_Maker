@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="32"
+   height="32"
+   viewBox="0 0 8.4666665 8.4666669"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"
+   sodipodi:docname="icon.svg"
+   inkscape:export-filename="F:\assets\projects\2020-04-21_Function_Maker\icon.png"
+   inkscape:export-xdpi="94.599998"
+   inkscape:export-ydpi="94.599998">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="7.9195959"
+     inkscape:cx="11.135482"
+     inkscape:cy="6.7662672"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     inkscape:showpageshadow="false"
+     inkscape:window-width="1102"
+     inkscape:window-height="728"
+     inkscape:window-x="752"
+     inkscape:window-y="236"
+     inkscape:window-maximized="0"
+     showguides="true"
+     inkscape:guide-bbox="true" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-288.53332)">
+    <g
+       id="g4585">
+      <rect
+         y="288.5365"
+         x="0.011811755"
+         height="8.4666662"
+         width="8.4666662"
+         id="rect4550"
+         style="fill:#878e88;fill-opacity:1;stroke-width:0.26377401" />
+      <path
+         sodipodi:nodetypes="ccccccccccc"
+         inkscape:connector-curvature="0"
+         id="path4530"
+         d="m 1.6152002,292.63223 4.0090197,3.97564 1.2194198,-1.21942 -1.3530418,-1.35304 1.3844916,-1.43307 -1.4179024,-0.43782 -0.6848753,1.1526 -0.851925,-0.47743 1.6508619,-2.38597 -0.9376129,-1.52193 z"
+         style="fill:#f55d3e;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    </g>
+    <g
+       id="g4581"
+       transform="matrix(0,-0.01501105,0.01501105,0,-3.7773705,296.06989)">
+      <rect
+         id="rect4552"
+         height="220"
+         width="100"
+         y="0"
+         x="0"
+         style="fill:#f55d3e" />
+      <rect
+         id="rect4554"
+         height="220"
+         width="100"
+         y="0"
+         x="100"
+         style="fill:#878e88" />
+      <rect
+         id="rect4556"
+         height="220"
+         width="100"
+         y="0"
+         x="200"
+         style="fill:#3f3f37" />
+      <rect
+         id="rect4558"
+         height="220"
+         width="100"
+         y="0"
+         x="300"
+         style="fill:#6a5837" />
+      <rect
+         id="rect4560"
+         height="220"
+         width="100"
+         y="0"
+         x="400"
+         style="fill:#494331;fill-opacity:1" />
+      <text
+         id="text4562"
+         alignment-baseline="middle"
+         font-size="6"
+         y="235"
+         x="10"
+         style="font-size:6px;font-family:Arial">Exported from Coolors.co</text>
+      <text
+         id="text4564"
+         alignment-baseline="middle"
+         font-size="6"
+         y="235"
+         x="490"
+         style="font-size:6px;font-family:Arial;text-anchor:end">https://coolors.co/f55d3e-878e88-3f3f37-6a5837-494331</text>
+    </g>
+  </g>
+</svg>
