@@ -10,6 +10,8 @@ namespace Function_Maker
     {
         //Form Settings
         private Size form_size = new Size(500,250);
+        private Icon form_icon = new Icon("icon.ico");
+        private string form_title = "Function Maker"
 
         //Title Settings
         private Label title = new Label();
@@ -33,6 +35,9 @@ namespace Function_Maker
         {   
             //Setup for Form
             this.Size = form_size;
+            this.Icon = form_icon;
+            this.Text = form_title;
+
 
             //Setup for Title
             title.Text = title_text;
