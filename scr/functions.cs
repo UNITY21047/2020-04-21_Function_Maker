@@ -1,14 +1,10 @@
 using System;
 using System.Collections.Generic;
 
-namespace Function_Maker
+namespace Name
 {
-    public class functions
+    public class Name
     {
-        private List<double> nums = new List<double>();
-        public int add(List<double> nums)
-        {
-            return 0;
-        }
+        
     }
 }

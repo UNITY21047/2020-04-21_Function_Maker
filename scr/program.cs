@@ -68,7 +68,7 @@ namespace Function_Maker
             //Added Events
             program_size_logger();
             function_box_mouse_hover();
-            function_button_output();
+            //function_button_output();
         }
 
         //Events and Methods
@@ -88,10 +88,10 @@ namespace Function_Maker
             output_label.Text = "OUTPUT: " + function_result();
         }
 
-        private void function_button_output()
-        {
-            function_button.Click += new EventHandler(this.function_button_Click);
-        }
+        //private void function_button_output()
+        //{
+        //    function_button.Click += new EventHandler(this.function_button_Click);
+        //}
 
         public void function_box_mouse_hover()
         {
@@ -116,26 +116,27 @@ namespace Function_Maker
             }
         }
 
-        public int function_result()
-        {
-            int hin = 0;
-            string jin = function_box.Text;
-            functions function = new functions();
-            
-            try
-            {
-                for(int i = 0; i < jin.Length; i++)
-                {
-
-                }
-            }
-            catch(Exception e)
-            {
-                MessageBox.Show(e.Message);
-            }
-
-            return hin;
-        }
+        //public double function_result()
+        //{
+        //    double hin = 0;
+        //    List<double> kin = new List<double>();
+        //    string jin = function_box.Text;
+        //    functions function = new functions();
+        //    
+        //    try
+        //    {
+        //        for(int i = 0; i < jin.Length; i++)
+        //        {
+        //            
+        //        }
+        //    }
+        //    catch(Exception e)
+        //    {
+        //        MessageBox.Show(e.Message);
+        //    }
+//
+        //    return hin;
+        //}
         //---------------------------------------------------------------- //
 
         [STAThread]
