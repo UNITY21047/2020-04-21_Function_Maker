@@ -3,7 +3,7 @@ using System.IO;
 using System.Threading;
 using System.Diagnostics;
 
-namespace Super_Calculater
+namespace Super_Calculator
 {
     public class run
     {
@@ -27,8 +27,8 @@ namespace Super_Calculater
 
             string path_one = @"arithmetic.cs";
             string path_two = @"arithmetic.bat";
-            string input_one = "using System;\n\nclass arithmetic\n{\n\tstatic void Main()\n\t{\n\t\tdouble math = "+ maths + ";\n\t\tConsole.WriteLine(\"Output:\" + math);\n\t\tConsole.ReadLine();\n\t}\n}";
-            string input_two = "csc -out:arithmetic.exe arithmetic.cs";
+            string input_one = "using System;\n\nclass arithmetic\n{\n\tstatic void Main()\n\t{\n\t\tdouble math = (double)("+ maths + ");\n\t\tConsole.WriteLine(\"Output:\" + math);\n\t\tConsole.ReadLine();\n\t}\n}";
+            string input_two = "csc -out:arithmetic.exe arithmetic.cs\n";
 
             try
             {
@@ -47,6 +47,8 @@ namespace Super_Calculater
                 yield1.Close();
                 yield1.Dispose();
 
+                Console.WriteLine("Thinking...\n");
+
                 Thread.Sleep(2000);
 
                 yield2.StartInfo.FileName = "arithmetic.exe";
@@ -54,6 +56,7 @@ namespace Super_Calculater
                 yield2.WaitForExit();
                 yield2.Close();
                 yield2.Dispose();
+
 
                 Main();
             }
@@ -78,7 +81,7 @@ namespace Super_Calculater
             {
                 count_two = Array.IndexOf(count_one, "x");
                 Console.Write("What is this number?: ");
-                count_one[count_two] = Console.ReadLine();
+                count_one[count_two] = "(double)" + Console.ReadLine();
             }
 
             copy_of_math = "";
