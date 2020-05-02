@@ -11,7 +11,7 @@ namespace Function_Maker
     {
         //Form Settings
         private Size form_size = new Size(400,300);
-        private Icon form_icon = new Icon("./cue/icon.ico");
+        private Icon form_icon = new Icon("F:\\assets\\projects\\2020-04-21_Function_Maker\\cue\\icon.ico");
         private string form_title = "Function Maker";
         private Boolean form_maximizebox = false;
 
@@ -85,7 +85,7 @@ namespace Function_Maker
 
         private void function_button_Click(object sender, System.EventArgs e)
         {
-            output_label.Text = "OUTPUT: " + function_result();
+            //output_label.Text = "OUTPUT: " + function_result();
         }
 
         //private void function_button_output()
