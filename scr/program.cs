@@ -37,6 +37,8 @@ namespace Function_Maker
         private Boolean function_box_check = true;
         private Boolean program_check = false;
 
+        //Calculator Values
+        
         public program() 
         {   
             //Setup for Form
@@ -88,11 +90,6 @@ namespace Function_Maker
             output_label.Text = "OUTPUT: " + function_result();
         }
 
-        //private void function_button_output()
-        //{
-        //    function_button.Click += new EventHandler(this.function_button_Click);
-        //}
-
         public void function_box_mouse_hover()
         {
             if(function_box_check == true)
@@ -116,27 +113,7 @@ namespace Function_Maker
             }
         }
 
-        //public double function_result()
-        //{
-        //    double hin = 0;
-        //    List<double> kin = new List<double>();
-        //    string jin = function_box.Text;
-        //    functions function = new functions();
-        //    
-        //    try
-        //    {
-        //        for(int i = 0; i < jin.Length; i++)
-        //        {
-        //            
-        //        }
-        //    }
-        //    catch(Exception e)
-        //    {
-        //        MessageBox.Show(e.Message);
-        //    }
-//
-        //    return hin;
-        //}
+        
         //---------------------------------------------------------------- //
 
         [STAThread]
