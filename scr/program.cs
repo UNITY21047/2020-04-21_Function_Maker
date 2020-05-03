@@ -12,14 +12,14 @@ namespace Function_Maker
     class program : Form
     {
         //Form Settings
-        private Size form_size = new Size(400,300);
+        private Size form_size = new Size(400, 150);
         private Icon form_icon = new Icon("C:\\Users\\werty\\Downloads\\assets\\projects\\2020-04-21_Function_Maker\\cue\\icon.ico");
         private string form_title = "Function Maker";
         private Boolean form_maximizebox = false;
 
         //Function Text Box Settings
         private RichTextBox function_box = new RichTextBox();
-        private Size function_box_size = new Size(370,20);
+        private Size function_box_size = new Size(300,20);
         private Point function_box_location = new Point(10,25);
         private string function_box_text = "Place function here!";
 
@@ -33,7 +33,7 @@ namespace Function_Maker
         private Label output_label = new Label();
         private string output_label_text = "OUTPUT: ";
         private Point output_label_location = new Point(160,75);
-        private Size output_label_size = new Size(9,15);
+        private Size output_label_size = new Size(150,12);
         private Font output_label_font = new Font("Times New Roman", 9);
 
         //Miscellaneous Variables
@@ -104,57 +104,73 @@ namespace Function_Maker
                 maths = check_for_Xs();
             }
 
-            string path_one = @"arithmetic.cs";
             string path_two = @"arithmetic.bat";
-            string input_one = "using System;\nusing System.IO;\n\nclass arithmetic\n{\n\tstatic void Main()\n\t{\n\t\tstring path_one = @\"arithmetic.txt\";\n\t\tdouble math = (double)("+ maths + ");\n\t\tstring input_one = \"\" + math;\n\t\tStreamWriter output_file_one = new StreamWriter(path_one);\n\t\toutput_file_one.WriteLine(input_one);\n\t\toutput_file_one.Close();\n\t\toutput_file_one.Dispose();\n\t}\n}";
-            string input_two = "csc -out:arithmetic.exe arithmetic.cs\n";
+            string path_three = @"arithmetic.cs";
+            //string path_four = @"arithmetic.txt";
+            StreamWriter output_file_two = new StreamWriter(path_two);
+            StreamWriter output_file_three = new StreamWriter(path_three);
 
             try
             {
-                StreamWriter output_file_one = new StreamWriter(path_one);
-                output_file_one.WriteLine(input_one);
-                output_file_one.Close();
-                output_file_one.Dispose();
-
-                StreamWriter output_file_two = new StreamWriter(path_two);
-                output_file_two.WriteLine(input_two);
+                output_file_two.WriteLine("csc -out:arithmetic.exe arithmetic.cs\n");
                 output_file_two.Close();
                 output_file_two.Dispose();
+            }
+            catch (System.Exception error_one)
+            {
+                output_label.Text = "OUTPUT: Error";
+                MessageBox.Show("" + error_one);
+            }
 
-                yield1.StartInfo.FileName = "arithmetic.bat";
+            try
+            {
+                output_file_three.WriteLine("class arithmetic{static void Main(){string path_one = @\"arithmetic.txt\";if(File.Exists(\".\\arithmetic.txt\")){File.Delete(\".\\arithmetic.txt\");}double math = (double)(" + maths + "); string input_one = \"\" + math;StreamWriter output_file_one = new StreamWriter(path_one);output_file_one.WriteLine(input_one);output_file_one.Close();output_file_one.Dispose();}}");
+                output_file_three.Close();
+                output_file_three.Dispose();
+            }
+            catch (System.Exception error_two)
+            {
+                output_label.Text = "OUTPUT: Error";
+                MessageBox.Show("" + error_two);
+            }
+
+            try
+            {
+                yield1.StartInfo.FileName = ".\\arithmetic.bat";
+                yield1.StartInfo.CreateNoWindow = true;
                 yield1.Start();
+                yield1.WaitForExit();
                 yield1.Close();
                 yield1.Dispose();
+            }
+            catch (System.Exception error_three)
+            {
+                MessageBox.Show("" + error_three);
+            }
 
-                yield2.StartInfo.FileName = "arithmetic.exe";
+            try
+            {
+                yield2.StartInfo.FileName = ".\\arithmetic.exe";
+                yield2.StartInfo.CreateNoWindow = true;
                 yield2.Start();
                 yield2.WaitForExit();
                 yield2.Close();
                 yield2.Dispose();
             }
-            catch
+            catch (System.Exception error_four)
             {
-                output_label.Text = "OUTPUT: " +"``\\:)/``" + " : Not a proper function!\n";
+                MessageBox.Show("" + error_four);
             }
-
-            output_label.Text += "Thinking...";
-            Thread.Sleep(2000);
 
             try
             {
-                StreamReader get_output = new StreamReader("arithmetic.txt");
-                string input = "";
-
-                while ((input = get_output.ReadLine()) != null)
-                {
-                    output_label.Text = input;
-                }
-
-                output_label.Text = "OUTPUT: " + input; 
+                StreamReader yield3 = new StreamReader("arithmetic.txt");
+                string input = yield3.ReadLine();
+                output_label.Text = "OUTPUT: " + input;
             }
-            catch (System.Exception em)
+            catch (System.Exception error_five)
             {
-                output_label.Text = "OUTPUT: Error:" + em;
+                MessageBox.Show("" + error_five);
             }
         }
 
@@ -214,7 +230,7 @@ namespace Function_Maker
                     input = "0";
                 }
                 count_two = Array.IndexOf(count_one, "x");
-                count_one[count_two] = "(double)" + input;//------------------------------------------------------------------------------------------------
+                count_one[count_two] = "(double)" + input;
             }
 
             copy_of_math = "";

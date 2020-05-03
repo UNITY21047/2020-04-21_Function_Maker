@@ -20,12 +20,14 @@ namespace Function_Maker
         private string wield_button_text = "GO!";
         private Font wield_button_font = new Font("Times New Roman", 9);
         private Point wield_button_location = new Point(80, 85);
+        private Icon form_icon = new Icon("C:\\Users\\werty\\Downloads\\assets\\projects\\2020-04-21_Function_Maker\\cue\\icon.ico");
     
         public wield()
         {
             Form wield = new Form();
             wield.StartPosition = FormStartPosition.CenterScreen;
-            wield.Size = new Size(250, 150);
+            wield.Size = new Size(150, 100);
+            wield.Icon = form_icon;
             wield_text_box.Size = wield_text_box_size;
             wield_text_box.Location = wield_text_box_location;
             wield_button.Text = wield_button_text;
