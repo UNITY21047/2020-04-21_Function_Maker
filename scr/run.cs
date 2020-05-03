@@ -27,7 +27,7 @@ namespace Super_Calculator
 
             string path_one = @"arithmetic.cs";
             string path_two = @"arithmetic.bat";
-            string input_one = "using System;\n\nclass arithmetic\n{\n\tstatic void Main()\n\t{\n\t\tdouble math = "+ maths + ";\n\t\tConsole.WriteLine(\"Output:\" + math);\n\t\tConsole.ReadLine();\n\t}\n}";
+            string input_one = "using System;\n\nclass arithmetic\n{\n\tstatic void Main()\n\t{\n\t\tdouble math = (double)("+ maths + ");\n\t\tConsole.WriteLine(\"Output:\" + math);\n\t\tConsole.ReadLine();\n\t}\n}";
             string input_two = "csc -out:arithmetic.exe arithmetic.cs\n";
 
             try
@@ -81,7 +81,7 @@ namespace Super_Calculator
             {
                 count_two = Array.IndexOf(count_one, "x");
                 Console.Write("What is this number?: ");
-                count_one[count_two] = Console.ReadLine();
+                count_one[count_two] = "(double)" + Console.ReadLine();
             }
 
             copy_of_math = "";
